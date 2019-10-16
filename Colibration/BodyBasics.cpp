@@ -200,8 +200,8 @@ void CBodyBasics::ProcessBody(INT64 nTime, int nBodyCount, IBody** ppBodies)
 							trackPointsXY[j] = jointPoints[j];
 
 
-							cout << rightHandConfidence;
-							cout << "\n";
+							//cout << rightHandConfidence;
+							//cout << "\n";
 						}
 					}
 				}
