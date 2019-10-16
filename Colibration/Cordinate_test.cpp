@@ -52,7 +52,7 @@ int main(){
 
 
 	sf::RenderWindow _mainWindow;
-	_mainWindow.create(sf::VideoMode(1900, 1080), "Pang!");
+	_mainWindow.create(sf::VideoMode(1920, 1200), "Pang!"/*, sf::Style::Fullscreen*/);
 	
 
 	while (true)
@@ -63,8 +63,8 @@ int main(){
 		float y = (application.SkeletPointsXY(HANDRIGHT).y + application.SkeletPointsXY(WRISTRIGHT).y + application.SkeletPointsXY(HANDTIPRIGHT).y + application.SkeletPointsXY(THUMBRIGHT).y)/4;
 		float z = (application.DepthSkeletonPoints(HANDRIGHT) + application.DepthSkeletonPoints(WRISTRIGHT) + application.DepthSkeletonPoints(HANDTIPRIGHT)+ application.DepthSkeletonPoints(THUMBRIGHT) + application.DepthSkeletonPoints(ELBOWRIGHT))/5;
 
-		float X = x * 1900 / 640; // + 550;				//640 - const from kinect, probably the size of with depth sensor
-		float Y = y * 1080 / 280;// +323;				//280 - const from kinect, probably the size of heith depth sensor
+		float X =((1920-x*1920/640)-0)*4.4/4.4; // + 550;				//640 - const from kinect, probably the size of with depth sensor
+		float Y = (y * 1200 / 280 - 0)*3.2/3.2;// +323;				//280 - const from kinect, probably the size of heith depth sensor
 
 		_mainWindow.clear(sf::Color(0, 0, 0));
 		if (z >= 0)
